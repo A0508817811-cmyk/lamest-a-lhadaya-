@@ -1,0 +1,123 @@
+
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>لمسة الهدايا</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>🎀 لمسة الهدايا</h1>
+    <p>هديتك أجمل بلمسة منّا</p>
+</header>
+
+<nav>
+    <a href="#home">الرئيسية</a>
+    <a href="#products">بوكساتنا</a>
+    <a href="#contact">تواصلي معنا</a>
+</nav>
+
+<section class="welcome" id="home">
+    <h2>مرحباً بك في لمسة الهدايا</h2>
+    <p>اختاري بوكسك المفضل واكتشفي تفاصيله</p>
+</section>
+
+<section id="products">
+    <h2>بوكسات الهدايا</h2>
+
+    <div class="products">
+
+        <div class="product-card" onclick="showDetails(0)">
+            <img src="uu.jpg" alt="بوكسات العنايه ">
+            <h3>بوكس العناية</h3>
+            <p>120 ريال</p>
+        </div>
+
+        <div class="product-card" onclick="showDetails(1)">
+            <img src="gg.jpg" alt="بوكسات القهوة">
+            <h3>بوكس القهوة</h3>
+            <p>300 ريال</p>
+        </div>
+
+        <div class="product-card" onclick="showDetails(2)">
+           <img src="aa.jpg" alt="بوكسات الشوكولاته">
+            <h3>بوكس الشوكولاتة</h3>
+            <p>180 ريال</p>
+        </div>
+
+        <div class="product-card" onclick="showDetails(3)">
+            <img src="bb.jpg" alt="بوكسات الميلاد">
+            <h3>بوكس الميلاد</h3>
+            <p>200 ريال</p>
+        </div>
+
+        <div class="product-card" onclick="showDetails(4)">
+            <img src="ee.jpg" alt="بوكسات الهدايا">
+            <h3>بوكس الهدايا</h3>
+            <p>350 ريال</p>
+        </div>
+
+    </div>
+</section>
+
+<!-- تفاصيل كل بوكس -->
+<div class="popup" id="giftPopup">
+    <div class="popup-content">
+
+        <button class="close" onclick="closePopup()">×</button>
+
+        <img id="popupImage" src="" alt="صورة البوكس">
+
+        <h2 id="popupTitle"></h2>
+        <p id="popupDescription"></p>
+        <h3 id="popupPrice"></h3>
+
+        <label>ملاحظات ونواقص الطلب:</label>
+        <textarea id="orderNotes"
+        placeholder="اكتبي ملاحظاتك هنا"></textarea>
+
+        <button onclick="sendOrderNote()">حفظ الملاحظات</button>
+
+    </div>
+</div>
+
+<!-- التواصل والشكاوى -->
+<section id="contact">
+    <h2>الشكاوى والتواصل 💌</h2>
+
+    <p>رأيك يهمنا ويسعدنا استقبال ملاحظاتك</p>
+
+    <form id="contactForm">
+
+        <input type="text" placeholder="الاسم" required>
+
+        <input type="tel" placeholder="رقم الجوال" required>
+
+        <select>
+            <option>استفسار</option>
+            <option>شكوى</option>
+            <option>نواقص في الطلب</option>
+            <option>اقتراح</option>
+        </select>
+
+        <textarea placeholder="اكتبي رسالتك هنا" required></textarea>
+
+        <button type="submit">إرسال الرسالة</button>
+
+    </form>
+
+    <p>رقم التواصل: 05XXXXXXXX</p>
+</section>
+
+<footer>
+    <p>© 2026 لمسة الهدايا - جميع الحقوق محفوظة</p>
+</footer>
+
+<script src="script.js"></script>
+
+</body>
+</html>
